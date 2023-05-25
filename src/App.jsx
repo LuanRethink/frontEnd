@@ -1,10 +1,23 @@
-import Home from "./view";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Products } from "./view";
+import Header from "./layout/header";
+import Footer from "./layout/footer";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <Home />
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/products" element={<Products />} />
+          <Route path="/products/:id" element={<Products />} />
+          <Route path="*" element={<h1> Pàgina não existe </h1>} />
+          {/* <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home />} /> */}
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </>
   );
 }
