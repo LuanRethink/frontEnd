@@ -1,34 +1,42 @@
-import Header from "../../layout/header";
-import Footer from "../../layout/footer";
 import ImageCard from "../../components/imageCard";
 import windows from "../../assets/windows.webp";
 import "./styles.css";
+import { useState, useEffect } from "react";
+import getProducts from "../../services/products";
 
 const Products = () => {
+  const [products, setProducts] = useState();
+  useEffect(() => {
+    getProducts()
+      .then((response) => setProducts(response))
+      .catch((err) => alert(err));
+  }, []);
+
   return (
     <>
-      <Header />
-      <div className="productsInputArea">
-        <div>
+      {/* <div className="productsInputArea">
+        <div className="productsInputDiv">
           <input placeholder="Procurando por algum produto?"></input>
         </div>
-        <div>
+        <div className="productsInputDiv">
           <input placeholder="Selecione a categoria"></input>
         </div>
+      </div> */}
+      <div className="productsListDiv">
+        <div className="productsListTitle">
+          <h1>Products List</h1>
+        </div>
+        <div className="imagesDiv">
+          {products?.map((product) => (
+            <ImageCard
+              key={product.id}
+              imagePath={product.image}
+              price={product.price.toFixed(2)}
+              title={product.title}
+            />
+          ))}
+        </div>
       </div>
-      <div className="productsListTitle">
-        <h2>Products List</h2>
-      </div>
-      <div className="imagesDiv">
-        <ImageCard imagePath={windows} price="122,3" title="Irmão"></ImageCard>
-        <ImageCard imagePath={windows} price="122,3" title="Irmão"></ImageCard>
-        <ImageCard imagePath={windows} price="122,3" title="Irmão"></ImageCard>
-        <ImageCard imagePath={windows} price="122,3" title="Irmão"></ImageCard>
-        <ImageCard imagePath={windows} price="122,3" title="Irmão"></ImageCard>
-        <ImageCard imagePath={windows} price="122,3" title="Irmão"></ImageCard>
-      </div>
-
-      <Footer />
     </>
   );
 };
