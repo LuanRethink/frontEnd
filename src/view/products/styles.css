@@ -1,7 +1,3 @@
-.separador{
-    height: 1000px;
-}
-
 body{
     margin: 0px
 }
@@ -10,6 +6,18 @@ a{
     text-decoration: none;
 }
 
-/* .insideProductsInputArea{
-    background: aquamarine;
-} */
+.productsListDiv{
+    position: relative;
+}
+
+.imagesDiv{
+    margin: 0 140px 5em 140px;
+    /* min-width: 1000px; */
+    gap: 100px;    
+    flex: 1;
+}
+
+.imageCard{
+    margin-left: 20px;
+    margin-right: 20px;
+}
