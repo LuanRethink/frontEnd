@@ -1,7 +1,15 @@
   #root {
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
+  min-height: 100%;
   margin: 0px;
   padding: 0px;
+
 } 
 
- 
+ .routesContainer{
+  display: flex;
+  flex: 1;
+ }
+
