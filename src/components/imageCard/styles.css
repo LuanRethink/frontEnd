@@ -19,15 +19,9 @@
     display: flex;
     justify-content: center;
     margin: 30px;
-    min-width: 86em
+    min-width: 620px;
 }
-.imagesDiv{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-left: 150px;
-    margin-right: 150px;
-}
+
 
 .imageCardImageDiv{
     position: relative;
