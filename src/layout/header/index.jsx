@@ -10,8 +10,8 @@ const Header = () => {
         <p> GREENMIND</p>
       </div>
       <div className="pagesDiv">
-        <a href="https://google.com">Home</a>
-        <a href="https://google.com">Products</a>
+        <a href="/">Home</a>
+        <a href="/products">Products</a>
         <a href="https://google.com">Contacts</a>
       </div>
       <div className="iconsDiv">
