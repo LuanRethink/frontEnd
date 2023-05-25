@@ -14,34 +14,35 @@ const Products = () => {
   }, []);
 
   return (
-    <div className="thiagoFirsen">
-      {!products ? (
-        <Loader />
-      ) : (
-        /* <div className="productsInputArea">
+    <div>
+      <div className="productsInputArea">
         <div className="productsInputDiv">
           <input placeholder="Procurando por algum produto?"></input>
         </div>
         <div className="productsInputDiv">
           <input placeholder="Selecione a categoria"></input>
         </div>
-      </div> */
-        <div className="productsListDiv">
-          <div className="productsListTitle">
-            <h1>Products List</h1>
-          </div>
-          <div className="imagesDiv">
-            {products?.map((product) => (
+      </div>
+
+      <div className="productsListDiv">
+        <div className="productsListTitle">
+          <h1>Products List</h1>
+        </div>
+        <div className="imagesDiv">
+          {!products ? (
+            <Loader />
+          ) : (
+            products?.map((product) => (
               <ImageCard
                 key={product.id}
                 imagePath={product.image}
                 price={product.price.toFixed(2)}
                 title={product.title}
               />
-            ))}
-          </div>
+            ))
+          )}
         </div>
-      )}
+      </div>
     </div>
   );
 };
