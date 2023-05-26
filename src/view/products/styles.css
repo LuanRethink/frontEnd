@@ -13,5 +13,15 @@
 }
 
 .productsInputArea{
-    margin-top: 30px;
+    justify-content: space-around;
+    padding-top: 30px;
+
+}
+
+.productsInputDiv{
+    display: flex;
+    justify-content: space-around;
+    width: 300px;
+    height: 64px;
+    border: 1px solid;
 }
