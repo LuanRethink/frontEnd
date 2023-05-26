@@ -1,0 +1,52 @@
+.productDiv{
+    height: 500px;
+    padding: 30px 0 0 80px;
+
+}
+
+.productDiv > p {
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 36px;
+}
+
+.productContent{
+    margin: 0 100px 0 100px;
+    display: flex;
+    gap: 70px;
+}
+
+.productInformation{
+    flex: 1;
+}
+
+.clientRating{
+    width: 100%;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+
+ .productDetails{
+    border-bottom: 1px solid;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 8px;
+    margin-top: -8px;
+}
+
+td {
+    border-left-width: 0;
+    min-width: 200px;
+    height: 18px;
+    border-spacing: 0 8px;
+}
+
+.ratingDiv{
+    display: flex;
+    gap: 30px;    
+    margin: 10px 0;    
+}
