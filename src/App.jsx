@@ -11,8 +11,8 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/product" element={<Product />} />
-          <Route path="/products/:id" element={<Products />} />
+          <Route path="/products/:id" element={<Product />} />
+          <Route path="/products/" element={<Products />} />
           <Route path="*" element={<h1> Pàgina não existe </h1>} />
           {/* <Route path="/" element={<Home />} />
           <Route path="/" element={<Home />} /> */}
