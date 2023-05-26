@@ -36,7 +36,6 @@
     position: relative;
     width: 100%;
     height: 27px;
-    font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
@@ -49,6 +48,10 @@
 }
 .imageCardInformationDiv > p:last-child{
     color: rgba(30, 30, 30, 0.5);   
+}
+.imageCardInformationDiv > p:first-child{
+    color: #1E1E1E;
+  
 }
 
 .imageCardImageDiv > img{
