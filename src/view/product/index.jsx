@@ -1,14 +1,16 @@
 import ImageCard from "../../components/imageCard";
 import getProduct from "../../services/product";
+import Loader from "../../components/loader";
+import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Rating } from "@mui/material";
 import "./styles.css";
-import Loader from "../../components/loader";
 
-const Product = () => {
+const Product = (info) => {
   const [product, setProduct] = useState();
+  const { id } = useParams();
   useEffect(() => {
-    getProduct(5)
+    getProduct(id)
       .then((response) => setProduct(response))
       .catch((err) => alert(err));
   }, []);
@@ -47,38 +49,7 @@ const Product = () => {
                 <b>{product.description}</b>
               </p>
             </div>
-            <div className="productDetails">
-              {/* <tr className="small-spacing">
-                <td>
-                  <b>Marca</b>
-                </td>
-                <td> Marca</td>
-              </tr>
-              <tr className="small-spacing">
-                <td>
-                  <b>Material</b>
-                </td>
-                <td> Marca</td>
-              </tr>
-              <tr className="small-spacing">
-                <td>
-                  <b>Dimensões do produto</b>
-                </td>
-                <td> Marca</td>
-              </tr>
-              <tr className="small-spacing">
-                <td>
-                  <b>Tipo de montagem</b>
-                </td>
-                <td> Marca</td>
-              </tr>
-              <tr className="small-spacing">
-                <td>
-                  <b>Tipo de acabamento</b>
-                </td>
-                <td> Marca</td>
-              </tr> */}
-            </div>
+            <div className="productDetails"></div>
           </div>
         </div>
       </div>
