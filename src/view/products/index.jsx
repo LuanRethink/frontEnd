@@ -1,17 +1,40 @@
+import getCategories from "../../services/categories";
 import ImageCard from "../../components/imageCard";
-import windows from "../../assets/windows.webp";
-import "./styles.css";
-import { useState, useEffect } from "react";
 import getProducts from "../../services/products";
+import Dropdown from "./dropdown";
 import Loader from "../../components/loader";
+import { useState, useEffect } from "react";
+import "./styles.css";
 
 const Products = () => {
   const [products, setProducts] = useState();
+  const [dropdownValue, setDropdownValue] = useState("");
+
   useEffect(() => {
     getProducts()
       .then((response) => setProducts(response))
       .catch((err) => alert(err));
+    getCategories()
+      .then((response) => {
+        setDropdownValue(response);
+      })
+      .catch((err) => alert(err));
   }, []);
+
+  const options = [
+    { label: "Fruit", value: "fruit" },
+
+    { label: "Vegetable", value: "vegetable" },
+
+    { label: "Meat", value: "meat" },
+  ];
+
+  const handleChange = (event) => {
+    console.log(dropdownValue);
+    setDropdownValue(event.target.value);
+  };
+
+  return dropdownValue ? <></> : <></>;
 
   return (
     <div>
@@ -20,7 +43,12 @@ const Products = () => {
           <input placeholder="Procurando por algum produto?"></input>
         </div>
         <div className="productsInputDiv">
-          <input placeholder="Selecione a categoria"></input>
+          <Dropdown
+            options={dropdownValue}
+            placeHolder="Selecione a categoria"
+            value={dropdownValue}
+            onChange={handleChange}
+          />
         </div>
       </div>
 
@@ -33,12 +61,14 @@ const Products = () => {
             <Loader />
           ) : (
             products?.map((product) => (
-              <ImageCard
-                key={product.id}
-                imagePath={product.image}
-                price={product.price.toFixed(2)}
-                title={product.title}
-              />
+              <a href={`/products/${product.id}`}>
+                <ImageCard
+                  key={product.id}
+                  imagePath={product.image}
+                  price={product.price.toFixed(2)}
+                  title={product.title}
+                />
+              </a>
             ))
           )}
         </div>
