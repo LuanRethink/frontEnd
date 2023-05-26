@@ -2,7 +2,7 @@ import "./styles.css";
 const Loader = () => {
   return (
     <div className="loaderDiv">
-      <span class="loader"></span>
+      <span className="loader"></span>
     </div>
   );
 };
