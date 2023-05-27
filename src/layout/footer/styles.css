@@ -17,7 +17,6 @@
 }
 
 .firstFooterBlock > a {
-    font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -74,7 +73,6 @@
 }
 
 .cardWithInformation > a {
-    font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
