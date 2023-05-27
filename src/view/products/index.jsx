@@ -1,18 +1,22 @@
 import getCategories from "../../services/categories";
 import ImageCard from "../../components/imageCard";
 import getProducts from "../../services/products";
-import Dropdown from "./dropdown";
 import Loader from "../../components/loader";
 import { useState, useEffect } from "react";
+import Dropdown from "./dropdown";
 import "./styles.css";
 
 const Products = () => {
   const [products, setProducts] = useState();
-  const [dropdownValue, setDropdownValue] = useState("");
+  const [dropdownValue, setDropdownValue] = useState();
+  const [filtered, setFiltered] = useState();
 
   useEffect(() => {
     getProducts()
-      .then((response) => setProducts(response))
+      .then((response) => {
+        setProducts(response);
+        setFiltered(response);
+      })
       .catch((err) => alert(err));
     getCategories()
       .then((response) => {
@@ -21,34 +25,38 @@ const Products = () => {
       .catch((err) => alert(err));
   }, []);
 
-  const options = [
-    { label: "Fruit", value: "fruit" },
-
-    { label: "Vegetable", value: "vegetable" },
-
-    { label: "Meat", value: "meat" },
-  ];
-
-  const handleChange = (event) => {
-    console.log(dropdownValue);
-    setDropdownValue(event.target.value);
+  const filterDropdown = (event) => {
+    const target = event.target.value;
+    if (target !== "Selecione a categoria") {
+      const result = products.filter((el) => el.category === target);
+      setFiltered(result);
+    } else {
+      setFiltered(products);
+    }
   };
 
-  return dropdownValue ? <></> : <></>;
+  const categoriesDropdownInput = dropdownValue?.map((el, index) => {
+    return <option key={index}>{el}</option>;
+  });
 
-  return (
+  return !dropdownValue ? (
+    <Loader></Loader>
+  ) : (
     <div>
       <div className="productsInputArea">
         <div className="productsInputDiv">
           <input placeholder="Procurando por algum produto?"></input>
         </div>
         <div className="productsInputDiv">
-          <Dropdown
-            options={dropdownValue}
+          {/* <Dropdown
+            children={categoriesDropdownInput}
             placeHolder="Selecione a categoria"
-            value={dropdownValue}
-            onChange={handleChange}
-          />
+            onChange={filterDropdown}
+          /> */}
+          <Dropdown
+            children={dropdownValue}
+            dropdownValue={dropdownValue}
+          ></Dropdown>
         </div>
       </div>
 
@@ -60,8 +68,8 @@ const Products = () => {
           {!products ? (
             <Loader />
           ) : (
-            products?.map((product) => (
-              <a href={`/products/${product.id}`}>
+            filtered?.map((product) => (
+              <a key={product.id} href={`/products/${product.id}`}>
                 <ImageCard
                   key={product.id}
                   imagePath={product.image}
