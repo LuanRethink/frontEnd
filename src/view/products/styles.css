@@ -22,47 +22,6 @@
   justify-content: space-around;
 }
 
-.dropdown {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 450px;
-  height: 65px;
-  border-radius: 10px;
-  border: 2px solid #c1dcdc;
-  padding: 5px 30px;
-}
-
-.productsInputDiv:focus-within {
-  outline: 2px solid #c1dcdc;
-  border-radius: 10px;
-}
-
-.dropdown select {
-  width: 100%;
-  background: transparent;
-  border: none;
-  outline: none;
-  appearance: none;
-  /* background-image: url("/src/assets/setaBaixo.svg"); */
-  /* background-repeat: no-repeat;
-    background-position: right; */
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 27px;
-  color: rgba(30, 30, 30, 0.5);
-  padding-left: 15px;
-}
-
-.dropdown .arrow {
-  margin-left: 300px;
-  position: relative;
-  transform: translateY(-50%);
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 5px solid #333;
-}
-
 .dropdownContainer {
   display: flex;
   position: relative;
