@@ -32,11 +32,7 @@ function Dropdown({ value, children, dropdownValue, onChange }) {
           <span className={`arrow ${isOpen ? "active" : ""}`}></span>
         </div>
       </button>
-      <ul className={`menu ${isOpen ? "active" : ""}`}>
-        {categoriesInput}
-
-        <li onClick={() => handleOptionSelect("Valor2")}>Valor2</li>
-      </ul>
+      <ul className={`menu ${isOpen ? "active" : ""}`}>{categoriesInput}</ul>
     </div>
   );
 }
