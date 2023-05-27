@@ -48,11 +48,6 @@ const Products = () => {
           <input placeholder="Procurando por algum produto?"></input>
         </div>
         <div className="productsInputDiv">
-          {/* <Dropdown
-            children={categoriesDropdownInput}
-            placeHolder="Selecione a categoria"
-            onChange={filterDropdown}
-          /> */}
           <Dropdown
             children={dropdownValue}
             dropdownValue={dropdownValue}
