@@ -1,27 +1,153 @@
-.imageCard{
-    margin-left: 20px;
-    margin-right: 20px;
+.imageCard {
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
-.imagesDiv{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin: 0 140px 5em 140px;
-    gap: 100px;    
-    flex: 1;
+.imagesDiv {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 0 140px 5em 140px;
+  gap: 100px;
+  flex: 1;
 }
 
-.productsInputArea{
-    justify-content: space-around;
-    padding-top: 30px;
-
+.productsInputArea {
+  justify-content: space-around;
+  padding-top: 30px;
 }
 
-.productsInputDiv{
-    display: flex;
-    justify-content: space-around;
-    width: 300px;
-    height: 64px;
-    border: 1px solid;
+.productsInputDiv {
+  display: flex;
+  justify-content: space-around;
+}
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 450px;
+  height: 65px;
+  border-radius: 10px;
+  border: 2px solid #c1dcdc;
+  padding: 5px 30px;
+}
+
+.productsInputDiv:focus-within {
+  outline: 2px solid #c1dcdc;
+  border-radius: 10px;
+}
+
+.dropdown select {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  appearance: none;
+  /* background-image: url("/src/assets/setaBaixo.svg"); */
+  /* background-repeat: no-repeat;
+    background-position: right; */
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: rgba(30, 30, 30, 0.5);
+  padding-left: 15px;
+}
+
+.dropdown .arrow {
+  margin-left: 300px;
+  position: relative;
+  transform: translateY(-50%);
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #333;
+}
+
+.dropdownContainer {
+  display: flex;
+  position: relative;
+  width: 450px;
+  height: 100px;
+  border: 2px solid #c1dcdc;
+  border-radius: 10px;
+}
+
+.dropdown-toggle .arrow {
+  display: inline-block;
+  position: relative;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #333;
+  transition: 0.3s ease-in-out;
+}
+
+.dropdown-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 30px;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+}
+
+.dropdown-toggle.active .arrow {
+  transform: rotate(180deg);
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+.selectedOption {
+  display: flex;
+  width: 50%;
+  flex: 1;
+  align-items: flex-start;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 27px;
+  color: rgba(30, 30, 30, 0.5);
+}
+
+.menu {
+  border-radius: 5px;
+  width: 100%;
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  background: white;
+  list-style: none;
+  box-sizing: border-box;
+  padding: 7px;
+  transition: 0.3s ease-in-out;
+}
+
+.menu.active {
+  display: block;
+  max-height: 100px;
+  overflow-y: scroll;
+}
+
+.arrowContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: #c1dcdc;
+  border-radius: 10px;
+}
+
+.menu > li {
+  border-radius: 7px;
+  border: 1px solid black;
+  border-bottom: none;
+  padding: 4px 0 4px 10px;
+}
+
+.menu > li:last-child {
+  border-bottom: 1px solid black;
 }
