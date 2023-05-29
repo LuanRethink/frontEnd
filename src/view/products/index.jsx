@@ -26,9 +26,8 @@ const Products = () => {
   }, []);
 
   const filterDropdown = (option) => {
-    console.log(option);
     if (option !== "Selecione a categoria") {
-      const result = products.filter((el) => el.category === option);
+      const result = products?.filter((el) => el.category === option);
       setFiltered(result);
     } else {
       setFiltered(products);
