@@ -25,19 +25,15 @@ const Products = () => {
       .catch((err) => alert(err));
   }, []);
 
-  const filterDropdown = (event) => {
-    const target = event.target.value;
-    if (target !== "Selecione a categoria") {
-      const result = products.filter((el) => el.category === target);
+  const filterDropdown = (option) => {
+    console.log(option);
+    if (option !== "Selecione a categoria") {
+      const result = products.filter((el) => el.category === option);
       setFiltered(result);
     } else {
       setFiltered(products);
     }
   };
-
-  const categoriesDropdownInput = dropdownValue?.map((el, index) => {
-    return <option key={index}>{el}</option>;
-  });
 
   return !dropdownValue ? (
     <Loader></Loader>
@@ -51,6 +47,7 @@ const Products = () => {
           <Dropdown
             children={dropdownValue}
             dropdownValue={dropdownValue}
+            onChange={filterDropdown}
           ></Dropdown>
         </div>
       </div>

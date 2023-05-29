@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./styles.css";
 
-function Dropdown({ value, children, dropdownValue, onChange }) {
+function Dropdown({ children, dropdownValue, onChange }) {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
 
@@ -20,6 +20,7 @@ function Dropdown({ value, children, dropdownValue, onChange }) {
   const handleOptionSelect = (option) => {
     setSelectedOption(option);
     setIsOpen(false);
+    onChange(option);
   };
 
   return (
