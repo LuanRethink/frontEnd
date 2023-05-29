@@ -26,13 +26,15 @@ const Home = () => {
     setExhibitedProducts(products?.slice(0, exhibitedProducts.length + 3));
   };
   const seeLess = () => {
-    const altura = divRef.current.offsetHeight;
+    const altura = divRef.current;
     if (!(exhibitedProducts.length - 3 < 3)) {
       setExhibitedProducts(products?.slice(0, exhibitedProducts.length - 3));
-      window.scrollTo(0, altura - 800);
+      window.scrollTo({
+        top: altura.offsetHeight - 800,
+        behavior: "smooth",
+      });
     }
     if (exhibitedProducts.length - 3 <= 3) {
-      console.log(exhibitedProducts.length - 3 == 3);
       setSeeLessVisible(false);
     }
   };
@@ -69,6 +71,7 @@ const Home = () => {
         </button>
       </div>
       <AboutUs></AboutUs>
+      <div className="categoriessDiv"></div>
     </>
   );
 };
