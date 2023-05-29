@@ -5,10 +5,16 @@ const ImageCard = ({ imagePath, title, price }) => {
       <div className="imageCardImageDiv">
         <img src={imagePath}></img>
       </div>
-      <div className="imageCardInformationDiv">
-        <p>{title}</p>
-        <p>R$: {price}</p>
-      </div>
+      {title && price ? (
+        <div className="imageCardInformationDiv">
+          <p>{title}</p>
+          <p>R$: {price}</p>
+        </div>
+      ) : (
+        <>
+          <div className="imageCardInformationDiv" />
+        </>
+      )}
     </div>
   );
 };
