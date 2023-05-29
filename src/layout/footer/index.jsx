@@ -40,16 +40,16 @@ const Footer = () => {
           third="Blog"
         ></FooterCard>
         <FooterCard
-          title="Information"
-          first="About"
-          second="Product"
-          third="Blog"
+          title="Company"
+          first="Community"
+          second="Career"
+          third="Our history"
         ></FooterCard>
         <FooterCard
-          title="Information"
-          first="About"
-          second="Product"
-          third="Blog"
+          title="Contact"
+          first="Getting Started"
+          second="Pricing"
+          third="Resources"
         ></FooterCard>
       </div>
     </div>
