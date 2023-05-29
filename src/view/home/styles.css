@@ -1,0 +1,109 @@
+.bestSellingDiv {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0px 50px 50px;
+}
+
+.homeInformations {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.homeInformations > h1 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+
+  color: #1e1e1e;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.homeInformations > p {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+
+  color: rgba(30, 30, 30, 0.5);
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.homeProductsListDiv {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-left: 0px;
+  gap: 20px;
+  row-gap: 80px;
+}
+
+.seeMore,
+.seeLess {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+
+  gap: 10px;
+
+  width: 168px;
+  height: 51px;
+
+  background: #c1dcdc;
+  border-radius: 8px;
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.seeMore:active,
+.seeLess:active {
+  background: #a4baba !important;
+}
+
+.seeMore:hover,
+.seeLess:hover {
+  background: #bbd4d4;
+}
+
+.seeLess.hidden {
+  display: none;
+}
+
+.homeProductsEnd {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  justify-content: flex-end;
+  margin: 50px 60px 40px 0px;
+}
+
+.aboutusDiv {
+  height: 513px;
+  left: 0px;
+  top: 652px;
+
+  background: #c1dcdc;
+}
+
+.white {
+  height: 20px;
+  background-color: white;
+}
