@@ -1,20 +1,19 @@
 import "./styles.css";
-const ImageCard = ({ imagePath, title, price }) => {
+const ImageCard = ({ imagePath, title, price, centralizeText }) => {
   return (
     <div className="imageCard">
       <div className="imageCardImageDiv">
         <img src={imagePath}></img>
       </div>
-      {title && price ? (
-        <div className="imageCardInformationDiv">
-          <p>{title}</p>
-          <p>R$: {price}</p>
-        </div>
-      ) : (
-        <>
-          <div className="imageCardInformationDiv" />
-        </>
-      )}
+      <div
+        className={`imageCardInformationDiv ${
+          centralizeText ? "centralizeText" : ""
+        }`}
+      >
+        {title ? <p>{title}</p> : ""}
+
+        {price ? <p>R$: {price}</p> : ""}
+      </div>
     </div>
   );
 };
