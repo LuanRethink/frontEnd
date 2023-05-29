@@ -1,81 +1,79 @@
-.footer{
-    display: flex;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 300px;
-    background-color: #C1DCDC;
-
+.footer {
+  display: flex;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  background-color: #c1dcdc;
 }
 
-.firstFooterBlock{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 50px 0px 30px 90px;
-
+.firstFooterBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px 0px 30px 90px;
 }
 
 .firstFooterBlock > a {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 27px;
-    color: rgba(30, 30, 30, 0.5);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: rgba(30, 30, 30, 0.5);
 }
 
-.secondFooterBlock{
-    display: flex;
-    gap: 60px;
-    margin-top: 50px;
-    padding-left: 200px;
+.secondFooterBlock {
+  display: flex;
+  gap: 60px;
+  margin-top: 50px;
+  margin-right: 50px;
+  padding-left: 200px;
 }
 
-.firstFooterBlock, .secondFooterBlock{
-    width: 50%;
-    min-width: 300px;
+.firstFooterBlock,
+.secondFooterBlock {
+  width: 50%;
+  min-width: 300px;
 }
 
-.greenmindFooter{
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+.greenmindFooter {
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
 
-
-.socialMedia{
-    display: flex;
-    flex:1;
-    gap: 15px;
-    
+.socialMedia {
+  display: flex;
+  flex: 1;
+  gap: 15px;
 }
 
-.socialMediaCircle{       
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;  
-    width: 48px;
-    height: 48px;
-    border: 1px solid rgba(30, 30, 30, 0.5);
+.socialMediaCircle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(30, 30, 30, 0.5);
 }
-.cardWithInformation{
-    display: flex;
-    flex-direction: column;
-    gap:20px;
-    width: 115px;
-    height: 200px;
+.cardWithInformation {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 140px;
+  height: 200px;
 }
 
-.cardWithInformation > a:first-child {  
-    font-weight: 700;
-    color: #1E1E1E;
+.cardWithInformation > a:first-child {
+  font-weight: 700;
+  color: #1e1e1e;
 }
 
 .cardWithInformation > a {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 27px;
-    color: rgba(30, 30, 30, 0.5);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: rgba(30, 30, 30, 0.5);
 }
