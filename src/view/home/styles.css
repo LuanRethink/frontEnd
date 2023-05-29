@@ -95,15 +95,71 @@
   margin: 50px 60px 40px 0px;
 }
 
-.aboutusDiv {
-  height: 513px;
-  left: 0px;
-  top: 652px;
-
+.aboutUsDiv {
   background: #c1dcdc;
 }
 
-.white {
-  height: 20px;
-  background-color: white;
+.aboutUsInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 60px;
+}
+
+.services {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px;
+}
+
+.serviceBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+}
+
+.serviceBox > img {
+  height: fit-content;
+  width: fit-content;
+}
+
+.categoriessDiv {
+  height: 100px;
+  background: red;
+}
+
+.serviceBox > h1 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  margin-top: 40px;
+  margin-bottom: 5px;
+
+  color: #000000;
+}
+
+.serviceBox > h2 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+
+  color: rgba(30, 30, 30, 0.5);
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.aboutUsInfo > h3 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+
+  color: rgba(30, 30, 30, 0.5);
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
 }
