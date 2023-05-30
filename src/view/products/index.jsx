@@ -36,12 +36,29 @@ const Products = () => {
     }
   };
 
+  const filterValue = (value) => {
+    if (inputValue !== "Procurando por algum produto?") {
+      const result = filtered?.filter((products) =>
+        products.title.includes(inputValue)
+      );
+      setFiltered(result);
+    }
+  };
+
+  const handleChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
   return !dropdownValue ? (
     <Loader />
   ) : (
     <div>
       <div className="productsInputArea">
-        <Search placeholder={inputValue} onClick={""}></Search>
+        <Search
+          placeholder={inputValue}
+          onChange={handleChange}
+          onClick={filterValue}
+        ></Search>
 
         <div className="productsInputDiv">
           <Dropdown
