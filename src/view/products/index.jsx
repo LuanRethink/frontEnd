@@ -8,8 +8,10 @@ import { useState, useEffect } from "react";
 import "./styles.css";
 
 const Products = () => {
+  const productPlaceHolder = "Procurando por algum produto?";
+
+  const [inputValue, setInputValue] = useState(productPlaceHolder);
   const [dropdownValue, setDropdownValue] = useState();
-  const [inputValue, setInputValue] = useState("Procurando por algum produto?");
   const [products, setProducts] = useState();
   const [filtered, setFiltered] = useState();
 
@@ -36,8 +38,8 @@ const Products = () => {
     }
   };
 
-  const filterValue = (value) => {
-    if (inputValue !== "Procurando por algum produto?") {
+  const filterValue = () => {
+    if (inputValue !== productPlaceHolder) {
       const result = filtered?.filter((products) =>
         products.title.includes(inputValue)
       );
