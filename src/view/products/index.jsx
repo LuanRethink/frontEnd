@@ -1,14 +1,16 @@
+import Dropdown from "../../components/dropdown/dropdown";
 import getCategories from "../../services/categories";
 import ImageCard from "../../components/imageCard";
 import getProducts from "../../services/products";
+import Search from "../../components/search";
 import Loader from "../../components/loader";
 import { useState, useEffect } from "react";
-import Dropdown from "./dropdown";
 import "./styles.css";
 
 const Products = () => {
-  const [products, setProducts] = useState();
   const [dropdownValue, setDropdownValue] = useState();
+  const [inputValue, setInputValue] = useState("Procurando por algum produto?");
+  const [products, setProducts] = useState();
   const [filtered, setFiltered] = useState();
 
   useEffect(() => {
@@ -35,13 +37,12 @@ const Products = () => {
   };
 
   return !dropdownValue ? (
-    <Loader></Loader>
+    <Loader />
   ) : (
     <div>
       <div className="productsInputArea">
-        <div className="productsInputDiv">
-          <input placeholder="Procurando por algum produto?"></input>
-        </div>
+        <Search placeholder={inputValue} onClick={""}></Search>
+
         <div className="productsInputDiv">
           <Dropdown
             children={dropdownValue}
