@@ -6,12 +6,12 @@ import { useState, useEffect } from "react";
 import { Rating } from "@mui/material";
 import "./styles.css";
 
-const Product = (info) => {
+const Product = () => {
   const [product, setProduct] = useState();
   const { id } = useParams();
   useEffect(() => {
     getProduct(id)
-      .then((response) => setProduct(response))
+      .then((response) => setProduct(...response))
       .catch((err) => alert(err));
   }, []);
 
@@ -35,7 +35,7 @@ const Product = (info) => {
               <div className="ratingDiv">
                 <Rating
                   name="read-only"
-                  value={product.rating.rate}
+                  value={parseFloat(product.rating.rate)}
                   readOnly
                   precision={0.1}
                 />
