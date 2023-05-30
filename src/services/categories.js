@@ -1,7 +1,7 @@
 import Api from "./api";
 
 const getCategories = async () => {
-  const response = await Api.get("/products/categories");
+  const response = await Api.get("/categories");
   return response.data;
 };
 
