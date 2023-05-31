@@ -12,7 +12,7 @@ const Header = () => {
       <div className="pagesDiv">
         <a href="/">Home</a>
         <a href="/products">Products</a>
-        <a href="https://google.com">Contacts</a>
+        <a href="/products/new">New Product</a>
       </div>
       <div className="iconsDiv">
         <a href="https://google.com">
