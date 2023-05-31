@@ -1,6 +1,7 @@
 import setaDireita from "../../assets/setaDireita.svg";
 import getCategories from "../../services/categories";
 import { useState, useEffect, useRef } from "react";
+import Button from "../../components/button/index";
 import ImageCard from "../../components/imageCard";
 import getProducts from "../../services/products";
 import AboutUs from "./about";
@@ -72,16 +73,15 @@ const Home = () => {
         </div>
       </div>
       <div className="homeProductsEnd">
-        <button type="button" className="seeMore" onClick={seeMore}>
-          Ver mais <img src={setaDireita}></img>
-        </button>
-        <button
-          type="button"
-          className={`seeLess ${seeLessVisible ? "visible" : "hidden"}`}
-          onClick={seeLess}
-        >
-          Ver menos
-        </button>
+        <Button onclick={seeMore} type={"button"} title={`Ver mais`} visible>
+          <img src={setaDireita}></img>
+        </Button>
+        <Button
+          onclick={seeLess}
+          type={"button"}
+          title={`Ver menos`}
+          visible={seeLessVisible}
+        ></Button>
       </div>
       <AboutUs></AboutUs>
       <div className="categoriessDiv">
