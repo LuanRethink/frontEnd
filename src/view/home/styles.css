@@ -46,46 +46,6 @@
   row-gap: 80px;
 }
 
-.seeMore,
-.seeLess {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 27px;
-
-  gap: 10px;
-
-  width: 168px;
-  height: 51px;
-
-  background: #c1dcdc;
-  border-radius: 8px;
-  border: none;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-}
-
-.seeMore:active,
-.seeLess:active {
-  background: #a4baba !important;
-}
-
-.seeMore:hover,
-.seeLess:hover {
-  background: #bbd4d4;
-}
-
-.seeLess.hidden {
-  display: none;
-}
-
 .homeProductsEnd {
   display: flex;
   align-items: center;
