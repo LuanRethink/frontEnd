@@ -1,8 +1,13 @@
 import Api from "./api";
 
-const getProduct = async (id) => {
+export const getProduct = async (id) => {
   const response = await Api.get(`/products/${id}`);
   return response.data;
 };
 
-export default getProduct;
+export const createProduct = async (product) => {
+  const response = await Api.post(`/products`, product);
+  return response.data;
+};
+
+export default "";
