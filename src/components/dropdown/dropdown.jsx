@@ -24,7 +24,10 @@ function Dropdown({ children, dropdownValue, onChange }) {
 
   return (
     <div className="dropdownContainer" onClick={toggleDropDown}>
-      <button className={`dropdown-toggle ${isOpen ? "active" : ""}`}>
+      <button
+        type="button"
+        className={`dropdown-toggle ${isOpen ? "active" : ""}`}
+      >
         <div className="selectedOption">
           {selectedOption ? selectedOption : "Selecione uma opção:"}
         </div>
