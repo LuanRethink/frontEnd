@@ -1,5 +1,5 @@
 import ImageCard from "../../components/imageCard";
-import getProduct from "../../services/product";
+import { getProduct } from "../../services/product";
 import Loader from "../../components/loader";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
