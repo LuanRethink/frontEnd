@@ -1,5 +1,6 @@
+import NewProducs from "./cadastro/product";
 import Products from "./products";
-import Home from "./home";
 import Product from "./product";
+import Home from "./home";
 
-export { Products, Home, Product };
+export { Products, Home, Product, NewProducs };
