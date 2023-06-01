@@ -21,7 +21,8 @@
   gap: 15px;
 }
 
-.flex-div > input {
+.flex-div > input,
+.flex-div > textarea {
   width: 800px;
   height: 64px;
 
@@ -39,7 +40,8 @@
 }
 
 #text-area {
-  height: 120px;
+  width: inherit;
+  max-height: 800px;
 }
 .buttonsDiv {
   display: flex;
