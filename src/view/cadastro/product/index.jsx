@@ -40,8 +40,7 @@ const NewProducs = () => {
 
   const handleSubmit = async (event) => {
     try {
-      console.log(forms);
-      await createProduct(forms);
+      await createProduct(forms).then((res) => console.log(res));
     } catch (error) {
       throw new Error(error);
     }
@@ -52,7 +51,6 @@ const NewProducs = () => {
     const name = event.target.name;
     const value = event.target.value;
     setForms((values) => ({ ...values, [name]: value }));
-    console.log(forms);
     event.preventDefault();
   };
 
@@ -64,7 +62,7 @@ const NewProducs = () => {
           <label>Título:</label>
           <input type="text" name={value.title} onChange={handleChange} />
           <label>Descrição:</label>
-          <input
+          <textarea
             type="text"
             id="text-area"
             name={value.description}
