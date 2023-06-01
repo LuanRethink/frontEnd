@@ -1,12 +1,14 @@
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   box-sizing: border-box;
+  flex-wrap: wrap;
   align-items: center;
-  height: 120px;
+  min-height: 120px;
   background-color: #c1dcdc;
   gap: 80px;
-  padding: 0 110px 0 110px;
+  row-gap: 20px;
+  padding: 20px 110px;
 }
 
 .nameDiv {
