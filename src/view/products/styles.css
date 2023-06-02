@@ -38,6 +38,10 @@
   border-radius: 10px;
 }
 
+.productsInputArea > .productsInputDiv > .dropdownContainer {
+  width: 450px;
+}
+
 .dropdown-toggle .arrow {
   display: inline-block;
   position: relative;
