@@ -20,8 +20,9 @@ const Product = () => {
   ) : (
     <>
       <div className="productDiv">
-        <br></br>
-        <p>{product.title}</p>
+        <div className="productTitle">
+          <p>{product.title}</p>
+        </div>
         <div className="productContent">
           <ImageCard imagePath={product.image}></ImageCard>
           <div className="productInformation">
