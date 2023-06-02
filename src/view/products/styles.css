@@ -3,6 +3,12 @@
   margin-right: 20px;
 }
 
+.productsListTitle {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
 .imagesDiv {
   display: flex;
   justify-content: space-evenly;
@@ -14,6 +20,8 @@
 
 .productsInputArea {
   justify-content: space-around;
+  flex-wrap: wrap;
+  row-gap: 30px;
   padding-top: 30px;
 }
 
