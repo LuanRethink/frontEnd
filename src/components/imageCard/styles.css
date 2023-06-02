@@ -16,13 +16,6 @@
   border-radius: 10px;
 }
 
-.productsListTitle {
-  display: flex;
-  justify-content: center;
-  margin: 30px;
-  min-width: 620px;
-}
-
 .imageCardImageDiv {
   position: relative;
   height: 340px;
