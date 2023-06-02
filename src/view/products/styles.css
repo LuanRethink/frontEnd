@@ -25,6 +25,10 @@
   padding-top: 30px;
 }
 
+.productsInputArea > .productsInputDiv > .dropdownContainer {
+  width: 450px;
+}
+
 .productsInputDiv {
   display: flex;
   justify-content: space-around;
@@ -38,8 +42,12 @@
   border-radius: 10px;
 }
 
-.productsInputArea > .productsInputDiv > .dropdownContainer {
-  width: 450px;
+.dropdownContainer > ul > li {
+  border: 1px transparent;
+}
+
+.dropdownContainer > ul > li:hover {
+  background-color: #c1dcdc9e;
 }
 
 .dropdown-toggle .arrow {
@@ -120,8 +128,4 @@
   border: 1px solid black;
   border-bottom: none;
   padding: 4px 0 4px 10px;
-}
-
-.menu > li:last-child {
-  border-bottom: 1px solid black;
 }
