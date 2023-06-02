@@ -12,7 +12,6 @@
 }
 
 .nameDiv {
-  font-family: "Abhaya Libre";
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -30,7 +29,12 @@
   color: #1e1e1e;
 }
 
+.nameDiv > a {
+  font-family: "Abhaya Libre", serif;
+}
+
 .pagesDiv {
+  font-family: "Poppins";
   flex: 1;
   display: inherit;
   font-style: normal;

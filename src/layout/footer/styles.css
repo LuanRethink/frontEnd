@@ -15,22 +15,22 @@
 }
 
 .firstFooterBlock > a {
+  width: 107px;
+  height: 29px;
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 27px;
-  color: rgba(30, 30, 30, 0.5);
+  font-size: 25px;
+  line-height: 29px;
+  color: #000000;
+  font-family: "Abhaya Libre", serif;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
 
 .secondFooterBlock {
   display: flex;
   margin-top: 50px;
-}
-
-.greenmindFooter {
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 }
 
 .socialMedia {
