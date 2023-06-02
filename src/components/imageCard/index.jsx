@@ -10,9 +10,11 @@ const ImageCard = ({ imagePath, title, price, centralizeText }) => {
           centralizeText ? "centralizeText" : ""
         }`}
       >
-        {title ? <p>{title}</p> : ""}
-
-        {price ? <p>R$: {price}</p> : ""}
+        <div className="productCardTitle">{title ? <p>{title}</p> : ""}</div>
+        <div className="productCardDescription">
+          {" "}
+          {price ? <p>R$: {price}</p> : ""}
+        </div>
       </div>
     </div>
   );
