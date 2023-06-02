@@ -16,11 +16,7 @@ const NewProducs = () => {
   };
 
   const [forms, setForms] = useState({
-    title: "",
     price: 0,
-    category: "",
-    description: "",
-    image: "",
     rate: 0,
     countRate: 0,
   });

@@ -18,14 +18,13 @@
 .flex-div {
   display: flex;
   flex-direction: column;
+  width: 800px;
   gap: 15px;
 }
 
 .flex-div > input,
 .flex-div > textarea {
-  width: 800px;
   height: 64px;
-
   background: #ffffff;
   border: 1px solid #c1dcdc;
   border-radius: 12px;
