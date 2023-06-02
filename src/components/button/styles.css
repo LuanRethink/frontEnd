@@ -27,10 +27,6 @@
   background: #a4baba !important;
 }
 
-.button {
-  background: #bbd4d4;
-}
-
 .white {
   background: white;
   border: 2px solid #c1dcdc;
@@ -38,4 +34,13 @@
 
 .button.hidden {
   display: none;
+}
+
+.button:hover {
+  background: #bbd4d4;
+}
+
+.button.white:hover {
+  background: rgb(241, 39, 39);
+  border: 2px solid rgb(241, 39, 39);
 }
