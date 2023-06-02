@@ -45,6 +45,15 @@
   gap: 20px;
   row-gap: 80px;
 }
+.homeProductsListDiv > a {
+  display: flex;
+  /* align-items: flex-end; */
+}
+
+.imageCard:last-child {
+  display: flex;
+  flex-direction: column;
+}
 
 .homeProductsEnd {
   display: flex;
