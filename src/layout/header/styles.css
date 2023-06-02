@@ -38,7 +38,7 @@
   font-size: 18px;
   line-height: 27px;
   gap: 30px;
-  left: 400px;
+  min-width: 315px;
 }
 
 .iconsDiv {
