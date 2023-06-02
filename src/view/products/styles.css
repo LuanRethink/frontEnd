@@ -33,7 +33,6 @@
 .dropdownContainer {
   display: flex;
   position: relative;
-  width: 450px;
   height: 67px;
   border: 2px solid #c1dcdc;
   border-radius: 10px;

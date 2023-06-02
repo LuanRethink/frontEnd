@@ -18,8 +18,9 @@
 .flex-div {
   display: flex;
   flex-direction: column;
-  width: 800px;
   gap: 15px;
+  width: 45%;
+  min-width: 350px;
 }
 
 .flex-div > input,
@@ -41,6 +42,8 @@
 #text-area {
   width: inherit;
   max-height: 800px;
+  width: 45%;
+  min-width: 350px;
 }
 .buttonsDiv {
   display: flex;
