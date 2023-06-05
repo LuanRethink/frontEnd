@@ -15,8 +15,6 @@ function App() {
           <Route path="/products/" element={<Products />} />
           <Route path="/products/new" element={<NewProducs />} />
           <Route path="*" element={<h1> Pàgina não existe </h1>} />
-          {/* <Route path="/" element={<Home />} />
-          <Route path="/" element={<Home />} /> */}
         </Routes>
         <Footer />
       </BrowserRouter>
