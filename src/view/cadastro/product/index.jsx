@@ -15,10 +15,10 @@ const NewProducs = () => {
     title: "title",
     description: "description",
     image: "image",
+    price: "price",
   };
 
   const [forms, setForms] = useState({
-    price: 0,
     rate: 0,
     countRate: 0,
     image: imagePlaceholder,
@@ -68,6 +68,8 @@ const NewProducs = () => {
             name={value.description}
             onChange={handleChange}
           />
+          <label>Preço:</label>
+          <input type="number" name={value.price} onChange={handleChange} />
           <label>Categoria:</label>
           <Dropdown
             children={categories}
