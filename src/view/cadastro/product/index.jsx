@@ -34,16 +34,17 @@ const NewProducs = () => {
 
   const handleDropdownChange = (category) => {
     setForms((values) => ({ ...values, category: category }));
-    console.log(forms);
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async () => {
     try {
-      await createProduct(forms).then((res) => console.log(res));
+      setDisable(true);
+      new Promise((res, rej) => {
+        res(createProduct(forms).then(window.location.reload()));
+      });
     } catch (error) {
       throw new Error(error);
     }
-    event.preventDefault();
   };
 
   const handleChange = (event) => {
@@ -73,6 +74,7 @@ const NewProducs = () => {
             dropdownValue={dropdownValue}
             onChange={handleDropdownChange}
           ></Dropdown>
+
           <label>URL imagem:</label>
           <input type="text" name={value.image} onChange={handleChange} />
           <div className="buttonsDiv">
@@ -87,6 +89,7 @@ const NewProducs = () => {
               onclick={handleSubmit}
               type={"submit"}
               visible
+              disabled={disable}
             ></Button>
           </div>
         </div>
