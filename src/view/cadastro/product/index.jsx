@@ -1,3 +1,4 @@
+import imagePlaceholder from "../../../assets/placeholder.png";
 import Dropdown from "../../../components/dropdown/dropdown";
 import { createProduct } from "../../../services/product";
 import getCategories from "../../../services/categories";
@@ -8,6 +9,7 @@ import "./styles.css";
 const NewProducs = () => {
   const [dropdownValue, setDropdownValue] = useState();
   const [categories, setCategories] = useState();
+  const [disable, setDisable] = useState(false);
 
   const value = {
     title: "title",
@@ -19,6 +21,7 @@ const NewProducs = () => {
     price: 0,
     rate: 0,
     countRate: 0,
+    image: imagePlaceholder,
   });
 
   useEffect(() => {
